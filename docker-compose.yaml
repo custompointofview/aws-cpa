@@ -1,0 +1,9 @@
+version: '2'
+services:
+  aws-costs:
+    build: .
+    image: aws-costs
+    volumes:
+      - ./aws:/root/.aws
+      - ./exports/csvs:/root/csvs
+      - ./exports/pngs:/root/pngs
